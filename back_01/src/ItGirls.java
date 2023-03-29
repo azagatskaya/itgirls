@@ -2,7 +2,10 @@ public class ItGirls {
     public static void main(String[] args){
 //        System.out.println("Hello, IT girls!");
         printTypes();
+
     }
+
+
     public static void printTypes(){
 /*        char valCh = 'ы';
         char unicodeCh = '\u044b';

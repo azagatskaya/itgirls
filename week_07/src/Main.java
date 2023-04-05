@@ -5,25 +5,25 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         System.out.println("MAIN");
-    int[] nums = {5,1,1,2,0,0};
-    int[] res = mergeSort(nums);
+//    int[] nums = {5,1,1,2,0,0};
+//    int[] res = mergeSort(nums);
 //            int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
 //            int[] expectedNums = {0, 1, 2, 3, 4, 0, 0, 0, 0, 0};
 //            int[] result = removeDuplicates(nums);
 //
 //            System.out.println(Arrays.equals(result, expectedNums));
 
-//        String str1 = "()";
-//        String str2 = "()[]{}";
-//        String str3 = "(]";
-//        String str4 = "([)]";
-//        String str5 = "([{}])";
-//
-//        isValid(str1);
-//        isValid(str2);
-//        isValid(str3);
-//        isValid(str4);
-//        isValid(str5);
+        String str1 = "()";
+        String str2 = "()[]{}";
+        String str3 = "(]";
+        String str4 = "([)]";
+        String str5 = "([{}])";
+
+        isValid(str1);
+        isValid(str2);
+        isValid(str3);
+        isValid(str4);
+        isValid(str5);
 
 //        countSymbols("Hello wOrld");
 //        countSymbols("itgirls are learning java");
@@ -43,38 +43,38 @@ public class Main {
 //            return res;
 //        }
 //
-//    public static void isValid(String s) {
-//        System.out.println("=========== isValid =============");
-//        String [] open = {"(","[","{"};
-//        String [] close = {")", "]", "}"};
-//        Stack<String> parStack = new Stack<>();
-//
-//        for(int i = 0; i < s.length(); i++){
-//            String sym = String.valueOf(s.charAt(i));
-//            if(parStack.size() == 0) {
-//                parStack.push(sym);
-//            } else if(parStack.size() > 0){
-//                String x = parStack.peek();
-//                int a = findIndexOf(open, x);
-//                int b = findIndexOf(close, sym);
-//                if(a > -1 && b > -1 && a == b) {
-//                    parStack.pop();
-//                } else {
-//                    parStack.push(sym);
-//                }
-//            }
-//
-//        }
-//        System.out.println("Result for " + s + " is " + (parStack.size() == 0));
-//    }
-//    public static int findIndexOf(String [] arr, String value){
-//        for(int i = 0; i < arr.length; i++){
-//            if(arr[i].equals(value)){
-//                return i;
-//            }
-//        }
-//        return -1;
-//    }
+    public static void isValid(String s) {
+        System.out.println("=========== isValid =============");
+        String [] open = {"(","[","{"};
+        String [] close = {")", "]", "}"};
+        Stack<String> parStack = new Stack<>();
+
+        for(int i = 0; i < s.length(); i++){
+            String sym = String.valueOf(s.charAt(i));
+            if(parStack.size() == 0) {
+                parStack.push(sym);
+            } else if(parStack.size() > 0){
+                String x = parStack.peek();
+                int a = findIndexOf(open, x);
+                int b = findIndexOf(close, sym);
+                if(a > -1 && b > -1 && a == b) {
+                    parStack.pop();
+                } else {
+                    parStack.push(sym);
+                }
+            }
+
+        }
+        System.out.println("Result for " + s + " is " + (parStack.size() == 0));
+    }
+    public static int findIndexOf(String [] arr, String value){
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].equals(value)){
+                return i;
+            }
+        }
+        return -1;
+    }
 //
 //    public static void countSymbols(String str){
 //        Map<String, Integer> symMap = new HashMap<>();

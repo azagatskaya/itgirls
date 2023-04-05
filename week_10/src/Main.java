@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -13,7 +11,7 @@ public class Main {
 
         // задача 2
         try {
-            user1.checkPassword("123456789", "012345678");;
+            user1.checkPassword("123456789", "012345678");
         } catch (WrongPasswordException e) {
             System.out.println("Password error " + e);
         }
